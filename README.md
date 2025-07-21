@@ -4,7 +4,7 @@
 
 Built with **Streamlit**, **pandas**, and **NetworkX**, the app is lightweight and deployable on platforms like **AWS EC2**, **Streamlit Cloud**, or any server with Python support.
 
-Check out the live website: famgen.streamlit.app
+Check out the live website: [famgen.streamlit.app](https://famgen.streamlit.app/)
 
 ---
 
