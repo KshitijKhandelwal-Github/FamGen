@@ -54,3 +54,27 @@ if button and file is not None:
         with col2:
             treeImg = cacheImage(file)
             st.download_button(label='Download Tree as Image', data=treeImg, file_name='familytree.png', mime='image/png')
+
+st.markdown(
+    """
+    <style>
+    .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background: #262730;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        z-index: 100;
+    }
+    </style>
+    <div class="footer">
+        Made with ❤️ by Kshitij &nbsp;|&nbsp;
+        <a href="https://github.com/KshitijKhandelwal-Github" style="color:#fff;" target="_blank">GitHub</a> &nbsp;|&nbsp;
+        <a href="https://www.linkedin.com/in/kshitij--khandelwal/" style="color:#0A66C2;" target="_blank">LinkedIn</a>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
