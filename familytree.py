@@ -19,7 +19,7 @@ def CreateTree(filename):
     else:
         raise ValueError("Unsupported file format. Please upload a .csv or .xlsx file.")
 
-    rawdf = pd.read_excel(filename, keep_default_na=False)  ## Change file path
+    rawdf = pd.read_excel(df, keep_default_na=False)  ## Change file path
     el1 = rawdf[['ID','MotherID']]
     el2 = rawdf[['ID','FatherID']]
     el1.columns = ['Child', 'ParentID']
