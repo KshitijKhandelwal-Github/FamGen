@@ -7,6 +7,18 @@ import streamlit
 
 f=None
 def CreateTree(filename):
+    fname = filename.name
+    extension = os.path.splitext(fname)[1].lower()
+    if extension == ".csv":
+        df = pd.read_csv(filename)
+    elif extension in [".xls", ".xlsx"]:
+        try:
+            df = pd.read_excel(filename, engine="openpyxl", keep_default_na=False)
+        except ValueError as e:
+            raise ValueError(f"Error reading Excel file: {e}")
+    else:
+        raise ValueError("Unsupported file format. Please upload a .csv or .xlsx file.")
+
     rawdf = pd.read_excel(filename, keep_default_na=False)  ## Change file path
     el1 = rawdf[['ID','MotherID']]
     el2 = rawdf[['ID','FatherID']]
